@@ -1,31 +1,33 @@
 const duplicateArray = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5];
 
-// const removeDuplicate = (arr) => [...new Set(arr)];
+const removeDuplicate = (arr) => [...new Set(arr)];
 
-// const newArr = removeDuplicate(duplicateArray);
+const newArr = removeDuplicate(duplicateArray);
 // console.log(newArr);
 
-// const findEven = (arr) => arr.filter((arr) => arr % 2 === 0);
+const findEven = (arr) => arr.filter((arr) => arr % 2 === 0);
 
-// const even = findEven(duplicateArray);
+const even = findEven(duplicateArray);
 // console.log(even);
 
 // split and reverse string
 
 const Aname = "john";
-// const reverse = (str) => str.split("").reverse().join("");
+const reverse = (str) => str.split("").reverse().join("");
 // const rep = reverse(name);
-// const join = (arr) => arr.reverse("");
-// const matches = (str) => str.match(/[aeiou]/gi);
-// const characterFreq = (str) => {
-//   result = {
-//     j: 2,
-//   };
-//   for (let char of str) {
-//     result[char] = result[char] ? result[char] + 1 : 1;
-//   }
-//   return result;
-// };
+const join = (arr) => arr.reverse("");
+const matches = (str) => str.match(/[aeiou]/gi);
+const characterFreq = (str) => {
+const newStr = str.split(" ")
+console.log(newStr);
+  result = {};
+  for (let char of newStr) {
+    result[char] = result[char] ? result[char] += 1 : 1;
+  }
+  return result;
+};
+
+console.log(characterFreq("hello world hello"));
 const user = [
   {
     name: "wilson",
@@ -41,15 +43,16 @@ const user = [
   },
 ];
 
-// const separateUsersByAge = (users) => {
-//   let grouped = {};
-//   users.forEach(({ name, age }) => {
-//     console.log(name);
-//     if (!grouped[age]) grouped[age] = [];
-//     grouped[age].push(name);
-//   });
-//   return grouped;
-// };
+const separateUsersByAge = (users) => {
+  let grouped = {};
+  users.forEach(({ name, age }) => {
+    console.log(name);
+    if (!grouped[age]) grouped[age] = [];
+    grouped[age].push(name);
+  });
+  return grouped;
+};
+
 // check palindrome
 // const check = (value) => {
 //   const str = value.toString();
@@ -57,7 +60,7 @@ const user = [
 //   return newStr === str;
 // };
 // const input = "the cat and the dog and the mouse";
-// const mostFrequentWord = (arr) => {
+// const mostFrequentWord = (str) => {
 //   const splitted = arr.split(" ");
 //   const newList = {};
 //   splitted.forEach((str) => {
@@ -80,7 +83,7 @@ const task = "the quick brown fox jumps over the lazy dog";
 const longestWord = (str) => {
   const splitted = str.split(" ");
   const setIt = [...new Set(splitted)];
-  console.log(setIt);
+  // console.log(setIt);
   let data = {};
 
   for (let char of setIt) {
