@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bunny Stream HLS Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+  <h2>Test Video</h2>
+  <video id="video" controls width="640" height="360" autoplay></video>
+
+  <script>
+    var video = document.getElementById('video');
+    var videoSrc = "https://vz-53bb27df-91f.b-cdn.net/b20d2214-e383-478a-a42e-2c75e0eef28e/playlist.m3u8";
+
+    if (Hls.isSupported()) {
+      var hls = new Hls();
+      hls.loadSource(videoSrc);
+      hls.attachMedia(video);
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      // Safari native HLS support
+      video.src = videoSrc;
+    }
+  </script>
+</body>
+</html>
