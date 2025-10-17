@@ -46,7 +46,8 @@ function learndash_video_iframe_shortcode($atts) {
         "421927" => "vz-b9f461c4-815.b-cdn.net",
         "421925" => "vz-2b28255b-900.b-cdn.net",
         "421923" => "vz-9945b192-7cd.b-cdn.net",
-        "486083" => "vz-19d163ae-ab1.b-cdn.net"
+        "486083" => "vz-19d163ae-ab1.b-cdn.net",
+         "514305" => "vz-dc532aa0-f01.b-cdn.net",
     ];
 
     $pull_zone = $pull_zone_map[$library_id] ?? null;
